@@ -15,10 +15,10 @@ public class Startup {
         employee.setLastName("Piper");
         employee.setSsn("333-1234");
                 
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.meetDepartmentStaff();
-        employee.reviewDeptPolicies();
-        employee.moveIntoCubicle("101");
+//        employee.meetWithHrForBenefitAndSalryInfo();
+//        employee.meetDepartmentStaff();
+//        employee.reviewDeptPolicies();
+//        employee.moveIntoCubicle("101");
 
         System.out.println("The employee's status is: " + employee.getStatus());
     }
