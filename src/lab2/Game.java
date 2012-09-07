@@ -15,5 +15,21 @@ public class Game {
    
     GameBoard gb = new GameBoard();
     GameCharacter gc = new GameCharacter();
+
+    public static int getHighScore() {
+        return highScore;
+    }
+
+    public static void setHighScore(int highScore) {
+        Game.highScore = highScore;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
     
 }
