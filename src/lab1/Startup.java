@@ -19,7 +19,7 @@ public class Startup {
 //        employee.meetDepartmentStaff();
 //        employee.reviewDeptPolicies();
 //        employee.moveIntoCubicle("101");
-
+        employee.performOrientation();
         System.out.println("The employee's status is: " + employee.getStatus());
     }
     

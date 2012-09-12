@@ -30,6 +30,7 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
+        //must be validated
         this.firstName = firstName;
     }
 
@@ -38,6 +39,7 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
+        //must be validated
         this.lastName = lastName;
     }
 
@@ -46,6 +48,7 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
+        //must be validated
         this.ssn = ssn;
     }
 
@@ -54,6 +57,7 @@ public class Employee {
     }
 
     public void setBirthDate(Date birthDate) {
+        //must be validated
         this.birthDate = birthDate;
     }
 
@@ -62,6 +66,7 @@ public class Employee {
     }
 
     public void setCubeId(String cubeId) {
+        //must be validated
         this.cubeId = cubeId;
     }
 
@@ -104,12 +109,15 @@ public class Employee {
         }
 
     }
-
-    public String getStatus() {
+    
+    public void performOrientation() {
         meetWithHrForBenefitAndSalryInfo();
         meetDepartmentStaff();
         reviewDeptPolicies();
         moveIntoCubicle("101");
+    }
+
+    public String getStatus() {
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
             return "Orientation is complete";

@@ -23,15 +23,15 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private final int MAX_RECS = 10;
     private final int NOT_FOUND = -1;
 
-    String partNo;
-    int foundIndex = NOT_FOUND;
+    private String partNo;
+    private int foundIndex = NOT_FOUND;
     private String partDesc;
-    double partPrice;
+    private double partPrice;
 
-    String[] partNums = new String[10];
-    String[] partDescs = new String[10];
-    double[] partPrices = new double[10];
-    int emptyRow;
+    private String[] partNums = new String[10];
+    private String[] partDescs = new String[10];
+    private double[] partPrices = new double[10];
+    private int emptyRow;
 
     /** Creates new form MainGUI */
     public MainGUI() {
@@ -355,8 +355,9 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
         }
     }
 
-    // Sort by partNumber
-    private void sortList() {
+    //Not the job of the GUI. SINGLE RESPONSIBILITY PRINCIPLE
+    // Sort by partNumber 
+    public void sortList() {
         // Only perform the sort if we have records
         if(emptyRow > 0) {
             // Bubble sort routine adapted from sample in text book...
@@ -385,8 +386,8 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
                     JOptionPane.WARNING_MESSAGE);
         }
     }
-
-    private void clearEntryFields() {
+//Not the job of the GUI. SINGLE RESPONSIBILITY PRINCIPLE
+    public void clearEntryFields() {
         txtNewProdNo.setText("");
         txtNewProdDesc.setText("");
         txtNewProdPrice.setText("");
